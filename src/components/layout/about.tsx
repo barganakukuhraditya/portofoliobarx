@@ -95,7 +95,7 @@ export default function About() {
             </ul>
           </div>
 
-          <div className="md:mr-10">
+          <div className="md:mr-24 md:-mt-10">
             <CardStack traits={about.traits} />
           </div>
         </div>

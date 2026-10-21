@@ -1,8 +1,11 @@
 import Navbar from "@/components/layout/navbar";
 import Hero from "@/components/sections/hero";
+import Projects from "@/components/sections/projects";
 import Skills from "@/components/sections/skills";
 import About from "@/components/layout/about";
+import Experience from "@/components/sections/experience";
 import Contact from "@/components/sections/contact";
+import Publications from "@/components/sections/publications";
 
 export default function Home() {
   return (
@@ -10,11 +13,11 @@ export default function Home() {
       <Navbar />
       <main>
         <Hero />
-        <section id="projects" className="min-h-screen" />
+        <Projects />
         <Skills />
         <About />
-        <section id="experience" className="min-h-screen" />
-        <section id="publications" className="min-h-screen" />
+        <Experience />
+        <Publications />
         <Contact />
       </main>
     </>

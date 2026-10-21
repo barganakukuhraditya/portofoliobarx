@@ -120,3 +120,168 @@ export const about = {
   ],
   traits: ["Problem Solver", "Fast Learner", "Team Player", "Disciplined"],
 } as const;
+
+export type ExperienceItem = {
+  type: string;
+  title: string;
+  organization: string;
+  period: string;
+  description: string;
+  images?: string[];
+  links?: { label: string; href: string }[];
+};
+
+export const experience: {
+  eyebrow: string;
+  heading: string;
+  description: string;
+  items: ExperienceItem[];
+} = {
+  eyebrow: "Growth & Experience",
+  heading: "Experience",
+  description:
+    "A look at the professional experience that shaped my back end engineering skills.",
+  items: [
+    {
+      type: "Internship",
+      title: "Junior Back End Developer",
+      organization: "Corporate Communication Division - PT Pos Indonesia",
+      period: "October 2025 - January 2026",
+      description:
+        "Engineered the backend of a Mailroom Information System using Go and MongoDB, implementing JWT authentication and secure CRUD operations. Designed a scalable NoSQL document schema with BSON/JSON structs to optimize data handling and keep data synchronized. Developed and deployed RESTful APIs to Heroku, establishing a production environment integrated with a Flutter mobile application.",
+      images: [
+        "/experience/pos-indonesia-2.jpg",
+        "/experience/pos-indonesia-1.jpg",
+        "/experience/pos-indonesia-3.jpg",
+      ],
+      links: [
+        // { label: "Certificate of Completion", href: "https://..." },
+      ],
+    },
+  ],
+};
+
+export type PublicationItem = {
+  title: string;
+  venue: string;
+  year: string;
+  indexing?: string;
+  authors?: string;
+  summary?: string;
+  tags: string[];
+  links?: { label: string; href: string }[];
+};
+
+export const publications: {
+  eyebrow: string;
+  heading: string;
+  description: string;
+  items: PublicationItem[];
+} = {
+  eyebrow: "Research & Publications",
+  heading: "Publications",
+  description:
+    "Research work that combines machine learning and logistics to solve real operational problems.",
+  items: [
+    {
+      title:
+        "PSO-Optimized XGBoost for Mail Delivery Delay Prediction and Logistics SLA Compliance",
+      venue: "JITK (Jurnal Ilmu Pengetahuan dan Teknologi Komputer)",
+      year: "2026",
+      indexing: "SINTA 2",
+      authors: "Syafrial Fachri Pane, Bargana Kukuh Raditya",
+      // summary: "Tulis 1-2 kalimat ringkasan paper kamu di sini.",
+      tags: [
+        "XGBoost",
+        "Particle Swarm Optimization",
+        "Machine Learning",
+        "Delay Prediction",
+        "Logistics SLA",
+      ],
+      links: [
+        { label: "Read Paper", href: "https://doi.org/10.33480/jitk.v12i1.8282" },
+      ],
+    },
+    {
+      title: "Tutorial Membuat Aplikasi Pencatatan Keuangan UMKM Berbasis Web",
+      venue: "Penerbit Buku Pedia",
+      year: "2023",
+      indexing: "Book",
+      authors:
+        "Ghaida Fasya Yuthika Afifah, Bargana Kukuh Raditya, Roni Habibi",
+      summary:
+        "A step-by-step tutorial book on building a financial recording application for MSMEs, covering the back end development process through to a finished application, developed with PHP and a MySQL database.",
+      tags: ["PHP", "MySQL", "Back End", "Web Application", "MSME Finance"],
+      links: [
+        { label: "View on Google Scholar", href: "https://books.google.co.id/books?hl=en&lr=&id=1GvWEAAAQBAJ&oi=fnd&pg=PP1&dq=info:QZGq4R5KiiQJ:scholar.google.com&ots=aQZDVB0r1a&sig=NYENTLQAyy0GyjqMswuOW5thGD0&redir_esc=y#v=onepage&q&f=false" },
+      ],
+    },
+  ],
+};
+
+export type ProjectItem = {
+  title: string;
+  description: string;
+  image?: string;
+  tags: string[];
+  href?: string;
+};
+
+export const projects: {
+  eyebrow: string;
+  heading: string;
+  description: string;
+  moreLink: { label: string; href: string };
+  items: ProjectItem[];
+} = {
+  eyebrow: "Selected work",
+  heading: "Work Gallery",
+  description:
+    "A collection of back end systems, APIs, and digital projects I've built.",
+  moreLink: {
+    label: "View More Projects",
+    href: "https://github.com/username-kamu",
+  },
+  items: [
+    {
+      title: "Mailroom Information System",
+      description:
+        "Back end of a mailroom information system built during my internship at PT Pos Indonesia, featuring JWT authentication, secure CRUD operations, and RESTful APIs deployed to Heroku for a Flutter mobile app.",
+      image: "/projects/mailroom.png",
+      tags: ["Go", "MongoDB", "JWT", "RESTful API", "Heroku", "Flutter"],
+      // href: "https://github.com/username-kamu/repo",
+    },
+    {
+      title: "Elfume Android Application",
+      description:
+        "A mobile perfume e-commerce application with a Flutter cross-platform front end, powered by a high-performance Go Fiber back end and a MongoDB database.",
+      image: "/projects/elfume.png",
+      tags: ["Go Fiber", "MongoDB", "Flutter", "Dart", "E-Commerce"],
+      // href: "https://github.com/username-kamu/repo",
+    },
+    {
+      title: "Idbiz Graphic Design Service Platform",
+      description:
+        "A service marketplace platform for graphic design, built with the JSCroot JavaScript framework on the front end, Go Fiber for the back end API, and MongoDB for persistent data management.",
+      image: "/projects/idbiz.png",
+      tags: ["Go Fiber", "MongoDB", "JSCroot", "REST API", "Marketplace"],
+      // href: "https://github.com/username-kamu/repo",
+    },
+    {
+      title: "Parfum.id",
+      description:
+        "A service marketplace platform for graphic design, built with the JSCroot JavaScript framework on the front end, Go Fiber for the back end API, and MongoDB for persistent data management.",
+      image: "/projects/parfumid.png",
+      tags: ["Go Fiber", "MongoDB", "JSCroot", "REST API", "Marketplace"],
+      href: "https://idparfum.github.io/",
+    },
+    {
+      title: "LearnOn.id",
+      description:
+        "A service marketplace platform for graphic design, built with the JSCroot JavaScript framework on the front end, Go Fiber for the back end API, and MongoDB for persistent data management.",
+      image: "/projects/learnonid.png",
+      tags: ["Go Fiber", "MongoDB", "JSCroot", "REST API", "Marketplace"],
+      href: "https://learnonid.github.io/",
+    },
+  ],
+};

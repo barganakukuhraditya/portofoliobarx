@@ -20,7 +20,7 @@ import { capabilities } from "@/data/portofolio";
 
 type TechIcon =
     | { label: string; Icon: IconType; color?: string }
-    | { label: string; src: string };
+    | { label: string; src: string; invert?: boolean };
 
 const techIconMap: Record<string, TechIcon> = {
     go: { Icon: SiGo, color: "#00ADD8", label: "Go" },
@@ -75,8 +75,7 @@ export default function Skills() {
                                     return (
                                         <li
                                             key={key}
-                                            title={item.label}
-                                            className="grid h-12 w-12 place-items-center rounded-xl bg-surface shadow-sm transition hover:-translate-y-0.5 hover:shadow-md"
+                                            className="group relative grid h-12 w-12 place-items-center rounded-xl border border-transparent bg-surface shadow-sm transition hover:z-20 hover:-translate-y-0.5 hover:border-fg hover:shadow-md"
                                         >
                                             {"src" in item ? (
                                                 <Image
@@ -84,7 +83,7 @@ export default function Skills() {
                                                     alt={item.label}
                                                     width={24}
                                                     height={24}
-                                                    className="h-6 w-6"
+                                                    className={`h-6 w-6 ${item.invert ? "dark:invert" : ""}`}
                                                 />
                                             ) : (
                                                 <item.Icon
@@ -93,6 +92,11 @@ export default function Skills() {
                                                     aria-label={item.label}
                                                 />
                                             )}
+
+                                            {/* Label saat hover */}
+                                            <span className="pointer-events-none absolute left-1/2 top-full mt-2 -translate-x-1/2 whitespace-nowrap rounded-md bg-surface px-2.5 py-1 font-mono text-[10px] font-medium uppercase tracking-wider opacity-0 shadow-md transition group-hover:opacity-100">
+                                                {item.label}
+                                            </span>
                                         </li>
                                     );
                                 })}
@@ -108,7 +112,7 @@ export default function Skills() {
                         return (
                             <article
                                 key={card.number}
-                                className="flex flex-col rounded-2xl border border-fg/5 bg-surface p-6 shadow-sm"
+                                className="flex flex-col rounded-2xl border border-fg/5 bg-surface p-6 shadow-sm transition duration-300 hover:-translate-y-1 hover:shadow-lg"
                             >
                                 <div className="flex items-start justify-between gap-4">
                                     <span className="text-5xl font-light leading-none">
@@ -131,7 +135,7 @@ export default function Skills() {
                                     {card.tags.map((tag) => (
                                         <li
                                             key={tag}
-                                            className="rounded border border-fg/10 bg-fg/5 px-2.5 py-1 font-mono text-[11px] text-fg/70"
+                                            className="rcursor-default rounded border border-fg/10 bg-fg/5 px-2.5 py-1 font-mono text-[11px] text-fg/70 transition hover:border-fg hover:text-fg"
                                         >
                                             {tag}
                                         </li>
