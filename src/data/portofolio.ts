@@ -1,6 +1,7 @@
 export const profile = {
   name: "Bargana",
   logoLetter: "B",
+  logo: "/logo-porto.png",
 };
 
 export const navLinks = [
@@ -13,7 +14,7 @@ export const navLinks = [
 
 export const hero = {
   marqueeText: "BARGANA KUKUH",
-  photo: "/barx.png",
+  photo: "/profile-barx.png",
   photoAlt: "Foto Bargana Kukuh Raditya",
 };
 
@@ -103,15 +104,14 @@ export const about = {
   eyebrow: "About me",
   heading: "Back End Developer. Problem Solver.",
   name: "Bargana Kukuh Raditya",
-  photo: "/barx.png",
+  photo: "/profile-barx.png",
   stats: [
-    { label: "Projects", value: "2" },
+    { label: "Projects", value: "6" },
     { label: "GPA", value: "3,65" },
     { label: "Graduating", value: "2026" },
   ],
   bio: [
-    "I'm an Applied Informatics Engineering student at Universitas Logistik dan Bisnis Internasional, focused on back end development with Go and MongoDB. I enjoy designing databases, building RESTful APIs, and implementing authentication for web and mobile applications.",
-    "Through my internship at PT Pos Indonesia and project-based work, I've built backend systems that run in production and integrate with Flutter apps. My research on delivery delay prediction was also published in JITK (SINTA 2).",
+    "I'm an Applied Informatics Engineering student at Universitas Logistik dan Bisnis Internasional, focused on back end development with Go and MongoDB. I enjoy designing databases, building RESTful APIs, and implementing authentication for web and mobile applications. Through my internship at PT Pos Indonesia and project-based work, I've built backend systems that run in production, and my research on delivery delay prediction was published in JITK (SINTA 2). Beyond back end development, I'm also interested in Software QA and Multimedia, where I enjoy making sure products work reliably and look great.",
   ],
   currently: [
     { icon: "code", title: "Building", text: "RESTful APIs & backend systems" },
@@ -131,12 +131,14 @@ export type ExperienceItem = {
   links?: { label: string; href: string }[];
 };
 
-export const experience: {
+export type ExperienceSection = {
   eyebrow: string;
   heading: string;
   description: string;
   items: ExperienceItem[];
-} = {
+};
+
+export const experience: ExperienceSection = {
   eyebrow: "Growth & Experience",
   heading: "Experience",
   description:
@@ -156,6 +158,33 @@ export const experience: {
       ],
       links: [
         // { label: "Certificate of Completion", href: "https://..." },
+      ],
+    },
+  ],
+};
+
+export const organization: ExperienceSection = {
+  eyebrow: "Leadership & Community",
+  heading: "Organization",
+  description:
+    "Organizational experience that built my teamwork, communication, and leadership skills.",
+  items: [
+    {
+      type: "Organization",
+      title: "Development Team",
+      organization: "Himpunan Mahasiswa Teknik Informatika (HIMATIF) - ULBI",
+      period: "2023 - 2025",
+      description:
+        "Developer Team member in the Academic and Scientific Division, building software for academic programs and running technical workshops and study groups on software engineering for Informatics Engineering students.",
+      images: [
+        "/organization/himatif-1.jpg",
+        "/organization/himatif-2.jpg",
+        "/organization/himatif-3.jpg",
+      ],
+      links: [
+        { label: "Certificate of Completion",
+          href: "/sertifikasi/himatif.png"
+        }
       ],
     },
   ],
@@ -190,7 +219,7 @@ export const publications: {
       year: "2026",
       indexing: "SINTA 2",
       authors: "Syafrial Fachri Pane, Bargana Kukuh Raditya",
-      // summary: "Tulis 1-2 kalimat ringkasan paper kamu di sini.",
+      summary: "A PSO-optimized XGBoost framework for predicting postal letter delivery delays and SLA violations, reaching 0.6605 accuracy and 0.6059 F1-score. Posting day was the strongest delay driver at 78.6%.",
       tags: [
         "XGBoost",
         "Particle Swarm Optimization",
@@ -247,7 +276,7 @@ export const projects: {
       title: "Mailroom Information System",
       description:
         "Back end of a mailroom information system built during my internship at PT Pos Indonesia, featuring JWT authentication, secure CRUD operations, and RESTful APIs deployed to Heroku for a Flutter mobile app.",
-      image: "/projects/mailroom.png",
+      image: "/projects/mailingroom.png",
       tags: ["Go", "MongoDB", "JWT", "RESTful API", "Heroku", "Flutter"],
       // href: "https://github.com/username-kamu/repo",
     },
@@ -265,22 +294,22 @@ export const projects: {
         "A service marketplace platform for graphic design, built with the JSCroot JavaScript framework on the front end, Go Fiber for the back end API, and MongoDB for persistent data management.",
       image: "/projects/idbiz.png",
       tags: ["Go Fiber", "MongoDB", "JSCroot", "REST API", "Marketplace"],
-      // href: "https://github.com/username-kamu/repo",
+      href: "https://id.biz.id/",
     },
     {
       title: "Parfum.id",
       description:
-        "A service marketplace platform for graphic design, built with the JSCroot JavaScript framework on the front end, Go Fiber for the back end API, and MongoDB for persistent data management.",
+        "A perfume website for browsing and shopping fragrance products online. Built with Go for the back end API, JavaScript for the front end, and MongoDB for data management.",
       image: "/projects/parfumid.png",
-      tags: ["Go Fiber", "MongoDB", "JSCroot", "REST API", "Marketplace"],
+      tags: ["Go Fiber", "MongoDB", "JavaScript", "REST API", "Marketplace"],
       href: "https://idparfum.github.io/",
     },
     {
       title: "LearnOn.id",
       description:
-        "A service marketplace platform for graphic design, built with the JSCroot JavaScript framework on the front end, Go Fiber for the back end API, and MongoDB for persistent data management.",
+        "A learning platform that brings together online and offline training courses along with a book catalog. Built with Go Fiber for the back end API, MongoDB for data management, and JavaScript for the front end.",
       image: "/projects/learnonid.png",
-      tags: ["Go Fiber", "MongoDB", "JSCroot", "REST API", "Marketplace"],
+      tags: ["Go Fiber", "MongoDB", "JavaScript", "REST API", "Learning Platform"],
       href: "https://learnonid.github.io/",
     },
   ],

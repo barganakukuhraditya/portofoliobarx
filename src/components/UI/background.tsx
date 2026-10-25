@@ -21,7 +21,7 @@ export default function Background() {
         className="absolute inset-0 h-full w-full text-fg opacity-[0.07]"
         fill="none"
         stroke="currentColor"
-        strokeWidth="1"
+        strokeWidth="2"
       >
         <path d="M-50 200 C 250 80, 500 340, 800 220 S 1250 120, 1500 260" />
         <path d="M-50 360 C 300 240, 520 500, 840 380 S 1250 280, 1500 420" />

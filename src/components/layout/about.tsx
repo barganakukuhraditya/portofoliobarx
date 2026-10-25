@@ -31,7 +31,7 @@ export default function About() {
               alt={about.name}
               width={224}
               height={224}
-              className="h-full w-full object-cover object-top"
+              className="h-full w-full object-cover object-center"
             />
           </div>
 
@@ -72,7 +72,7 @@ export default function About() {
         </div>
 
         {/* Currently + kartu trait */}
-        <div className="mt-10 flex flex-col items-start gap-40 md:flex-row md:items-center">
+        <div className="mt-8 flex flex-col items-start gap-8 md:mt-10 md:flex-row md:items-center md:gap-40">
           <div>
             <p className="font-mono text-[10px] uppercase tracking-[0.3em] text-fg/50">
               Currently
@@ -95,7 +95,7 @@ export default function About() {
             </ul>
           </div>
 
-          <div className="md:mr-24 md:-mt-10">
+          <div className="self-center pb-6 md:self-auto md:pb-0">
             <CardStack traits={about.traits} />
           </div>
         </div>

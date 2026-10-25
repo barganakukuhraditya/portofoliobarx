@@ -4,11 +4,17 @@ import PhotoSlider from "@/components/UI/photoslider";
 import { useState } from "react";
 // import Image from "next/image";
 import { ArrowLeft, ArrowRight, ArrowUpRight } from "lucide-react";
-import { experience } from "@/data/portofolio";
+import { ExperienceSection } from "@/data/portofolio";
 
-export default function Experience() {
+export default function Experience({
+    data,
+    id,
+}: {
+    data: ExperienceSection;
+    id: string;
+}) {
     const [index, setIndex] = useState(0);
-    const items = experience.items;
+    const items = data.items;
     const item = items[index];
     console.log(item);
     const many = items.length > 1;
@@ -18,18 +24,18 @@ export default function Experience() {
 
     return (
         <section
-            id="experience"
+            id={id}
             className="mx-auto flex min-h-screen max-w-[1280px] items-center px-6 pb-20 pt-36 sm:px-10"
         >
             <div className="w-full">
                 <p className="font-mono text-[11px] uppercase tracking-[0.3em] text-fg/50">
-                    {experience.eyebrow}
+                    {data.eyebrow}
                 </p>
                 <h2 className="mt-4 text-4xl font-black tracking-tight sm:text-6xl">
-                    {experience.heading}
+                    {data.heading}
                 </h2>
                 <p className="mt-5 max-w-xl text-[15px] leading-relaxed text-fg/60">
-                    {experience.description}
+                    {data.description}
                 </p>
 
                 <div
@@ -38,9 +44,9 @@ export default function Experience() {
                 >
                     {/* Kiri: teks */}
                     <div>
-                        <div className="flex items-start justify-between gap-4">
+                        <div className="flex flex-col gap-2 sm:flex-row sm:items-start sm:justify-between sm:gap-4">
                             <h3 className="text-xl font-bold">{item.title}</h3>
-                            <span className="shrink-0 pt-1 text-right font-mono text-xs text-fg/50">
+                            <span className="font-mono text-xs text-fg/50 sm:shrink-0 sm:pt-1 sm:text-right">
                                 {item.period}
                             </span>
                         </div>
@@ -102,8 +108,8 @@ export default function Experience() {
 
                     {/* Kanan: foto dengan kartu miring di belakang */}
                     <div className="relative mr-auto w-full max-w-md">
-                        <div className="absolute inset-0 -rotate-3 rounded-2xl bg-fg/10" />
-                        <div className="absolute inset-0 translate-y-3 rotate-2 rounded-2xl bg-blue-600/60" />
+                        <div className="absolute inset-0 -rotate-3 rounded-2xl border border-fg/10 bg-fg/10" />
+                        <div className="absolute inset-0 translate-y-3 rotate-2 rounded-2xl border border-fg/10 bg-fg/20" />
 
                         <div className="relative">
                             <PhotoSlider
