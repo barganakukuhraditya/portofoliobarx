@@ -111,7 +111,7 @@ export const about = {
     { label: "Graduating", value: "2026" },
   ],
   bio: [
-    "I'm an Applied Informatics Engineering student at Universitas Logistik dan Bisnis Internasional, focused on back end development with Go and MongoDB. I enjoy designing databases, building RESTful APIs, and implementing authentication for web and mobile applications. Through my internship at PT Pos Indonesia and project-based work, I've built backend systems that run in production, and my research on delivery delay prediction was published in JITK (SINTA 2). Beyond back end development, I'm also interested in Software QA and Multimedia, where I enjoy making sure products work reliably and look great.",
+    "A Bachelor of Applied Informatics Engineering graduate from Universitas Logistik dan Bisnis Internasional with practical experience in developing RESTful APIs and backend systems. Skilled in designing databases, implementing authentication, and developing backend services for web and mobile applications. Experienced in applying software development skills through internship and project-based work, with an interest in building reliable, efficient, and maintainable backend solutions. Possesses strong problem-solving skills, works well in a team, and has a strong interest in information technology, including software development and technical support, with a commitment to continuously improving technical skills and knowledge in the IT field.",
   ],
   currently: [
     { icon: "code", title: "Building", text: "RESTful APIs & backend systems" },
