@@ -26,7 +26,7 @@ export const contact = {
     "I'm open to opportunities where I can contribute to backend development, RESTful API design, and database engineering with Go and MongoDB.",
   resume: {
     label: "Download Resume",
-    href: "/CV-ATS-BarganaKukuhRaditya.pdf",
+    href: "/Curriculum-Vitae_Bargana-Kukuh-Raditya.pdf",
   },
   items: [
     {
